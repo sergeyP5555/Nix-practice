@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+body {
+    margin:0;
+}
 /*-------------------------------------------------Header-------------------------------------------------------------*/
 
 .navigation {
@@ -97,11 +99,12 @@
 .greetings {
     text-align: center;
     margin-bottom: 100px;
-    border-radius: 25px;
     background: linear-gradient(111deg, rgba(237, 224, 100, 1) 0%, rgba(29, 29, 28, 0.8127626050420168) 50%, rgba(238, 246, 48, 1) 100%);
     box-shadow: 2px -2px 10px black;
     animation: gradient-greetings 5s infinite linear;
     background-size: 400%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 @keyframes gradient-greetings {
@@ -156,6 +159,7 @@
 
 .info-about-us {
     text-align: center;
+    margin: 0 6px;
 }
 
 .advantage {
@@ -164,10 +168,11 @@
     margin-bottom: 150px;
     margin-top: 100px;
     background: linear-gradient(111deg, rgba(237, 224, 100, 1) 0%, rgba(29, 29, 28, 0.8127626050420168) 50%, rgba(238, 246, 48, 1) 100%);
-    border-radius: 50px;
     box-shadow: 2px -2px 10px black;
     animation: gradient-advantage 5s infinite linear;
     background-size: 400%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 @keyframes gradient-advantage {
@@ -528,14 +533,15 @@
 
 .block-menu {
     display: flex;
-    width: 100%;
+    width: 75%;
     justify-content: space-around;
     text-align: center;
-    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin: 15px auto;
 }
 
 .menu-element {
-    width: 25%;
+    width: 33%;
     position: relative;
     overflow: hidden;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,23 +10,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Caveat&family=Comic+Neue:ital,wght@1,700&family=Lobster&family=Lora:wght@700&family=Pacifico&family=Philosopher:ital,wght@1,700&display=swap"
           rel="stylesheet">
-    <title>Authorization</title>
+    <title>Our Menu</title>
 </head>
-<div class="login-wrapper">
-    <body>
-    <div class="authorization-form">
-        <div class="top-form">
-            <p class="form-title">La Fiesta!</p>
+<body>
+<div class="menu-wrapper">
+    <?php require_once 'header.php' ?>
+    <h2 class="menu-header">Меню</h2>
+    <div class="menu-list">
+        <div class="block-menu">
+            <?php
+            function classAutoLoad($classname)
+            {
+                $filename = $classname . ".php";
+                require_once($filename);
+            }
+
+            include_once 'product-list.php';
+            spl_autoload_register('classAutoLoad');
+            $productItem = new Template();
+            echo $productItem->rendering($products);
+            ?>
         </div>
-        <form class="authorization">
-            <input type="text" id="login" placeholder="Введите Ваш логин:">
-            <input type="password" placeholder="Введите Ваш пароль:">
-        </form>
-        <form class="entry">
-            <input class="login-button" type="button" value="Зарегестрироваться">
-            <input class="login-button" type="submit" value="Войти">
-        </form>
     </div>
-    </body>
+    <?php require_once 'footer.php' ?>
 </div>
+</body>
 </html>

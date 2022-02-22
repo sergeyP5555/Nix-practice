@@ -12,21 +12,9 @@
           rel="stylesheet">
     <title>Shopping-cart</title>
 </head>
+<body>
 <div class="cart-wrapper">
-    <body>
-    <div class="top-header">
-        <div class="logo">
-            <a href="index.html"><img class="image-logo" src="images/logo1.png" alt="logotype"></a>
-        </div>
-        <nav class="navigation">
-            <ul class="site-menu">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="menu.html">Меню</a></li>
-                <li><a href="shopping-cart.html">Корзина</a></li>
-                <li><a href="login.html">Войти</a></li>
-            </ul>
-        </nav>
-    </div>
+    <?php require_once 'header.php' ?>
     <div class="main-cart">
         <div class="foundation-cart">
             <div class="name-cart">
@@ -54,23 +42,7 @@
             <input class="send-order" type="submit" value="Отправить заказ">
         </form>
     </div>
-    <footer class="about-us">
-        <img class="left-footer-pizza" src="images/footer-pizza-3.png" alt="left-pizza">
-        <img class="right-footer-pizza" src="images/footer-pizza-2.png" alt="right-pizza">
-        <div class="work-time">
-            <p class="header-about-us">Режим работы:</p>
-            <p class="main-about-us">ПН-СБ 10.00-22.00<br>ВС 10.00-20.00</p>
-        </div>
-        <div class="contact">
-            <p class="header-about-us">Наш телефон:</p>
-            <p class="main-about-us">095-34-23-112<br>097-34-23-112</p>
-        </div>
-        <div class="address">
-            <p class="header-about-us">Мы находимся:</p>
-            <p class="main-about-us">г.Краматорск,ул.Дружбы,22.<br>г.Дружковка,ул.Машиностроителей,114.<br>г.Славянск,ул.Дворцовая,98.
-            </p>
-        </div>
-    </footer>
-    </body>
+    <?php require_once 'footer.php' ?>
 </div>
+</body>
 </html>
