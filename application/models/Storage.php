@@ -3,7 +3,7 @@
 namespace App\models;
 
 use App\lib\Exceptions\StorageException;
-use App\lib\Logger\FileLogger;
+use App\FileLogger;
 
 class Storage
 {
