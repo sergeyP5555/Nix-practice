@@ -1,0 +1,28 @@
+{
+    "name": "sergey/nix",
+    "authors": [
+        {
+            "name": "Sergey Popov",
+            "email": "popserg5555@gmail.com"
+        }
+    ],
+    "config": {
+        "github-oauth": {
+            "github.com": "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"
+        },
+        "disable-tls": false
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "application/"
+        }
+    },
+    "require": {
+        "ext-pdo_mysql": "*",
+        "ext-pdo": "*",
+        "squizlabs/php_codesniffer": "^3.7",
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "sergey5555/logger": "dev-master",
+        "symfony/mailer": "^5.4"
+    }
+}
