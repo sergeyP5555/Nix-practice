@@ -23,15 +23,15 @@ class Storage
     }
 }
 
-$storage = new Storage($amountProducts);
-$logger = new FileLogger();
-foreach ($amountProducts as $key => $val) {
-    try {
-        echo $storage->getProduct($key);
-    } catch (StorageException $e) {
-        $logger->warning($e->getMessage());
-    } catch (\Exception $e) {
-        $logger->error($e->getMessage());
-        die();
-    }
-}
+//$storage = new Storage($amountProducts);
+//$logger = new FileLogger();
+//foreach ($amountProducts as $key => $val) {
+//    try {
+//        echo $storage->getProduct($key);
+//    } catch (StorageException $e) {
+//        $logger->warning($e->getMessage());
+//    } catch (\Exception $e) {
+//        $logger->error($e->getMessage());
+//        die();
+//    }
+//}
