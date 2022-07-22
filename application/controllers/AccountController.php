@@ -21,7 +21,7 @@ class AccountController extends Controller
                 $login = $this->model->login($_POST['login'], $_POST['password']);
                 if ($login === true) {
                     $session = new Session();
-                    $session->set("userLogin", $_POST['login']);
+                    $session->set('userLogin', $_POST['login']);
                     header('Location: /main');
                 } else {
                     $this->view->render('Вход', ['message' => 'Вы не зарегестрированы!']);
@@ -41,8 +41,6 @@ class AccountController extends Controller
             try {
                 $result = $this->model->registration();
                 if ($result) {
-                    $confirmEmail = new Messenger();
-                    $confirmEmail->sendMessage();
                     $this->view->render('Регистрация', ['message' =>
                         'Регистрация прошла успешно!Подтвердите Ваш email в письме, высланном Вам на почту!']);
                     $this->logger->info('Зарегестрирован  новый пользователь!', ['User Name' => $_POST['login'],

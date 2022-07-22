@@ -9,14 +9,18 @@ class Session
         session_start();
     }
 
-    public function set(string $name, string $value): string
+    public function get(string $name)
     {
-        return $_SESSION[$name] = $value;
+        if (isset($_SESSION[$name])) {
+            return $_SESSION[$name];
+        } else {
+            return null;
+        }
     }
 
-    public function get(string $name): string
+    public function set($name, $value): void
     {
-        return isset($_SESSION[$name]) ?? false;
+        $_SESSION[$name] = $value;
     }
 
     public function destroy(string $name): void
@@ -26,6 +30,7 @@ class Session
 
     public function destroySession(): void
     {
+        session_destroy();
         if (isset($_SERVER['HTTP_COOKIE'])) {
             $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
             foreach ($cookies as $cookie) {
@@ -34,6 +39,5 @@ class Session
                 setcookie($name, '', time() - 1000);
             }
         }
-        session_destroy();
     }
 }
