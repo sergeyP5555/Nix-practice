@@ -25,6 +25,10 @@ return [
         'controller' => 'menu',
         'action' => 'menu',
     ],
+    'menu/products' => [
+        'controller' => 'menu',
+        'action' => 'products',
+    ],
 
     'cart' => [
         'controller' => 'cart',
