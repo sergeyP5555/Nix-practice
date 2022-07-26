@@ -11,4 +11,9 @@ class MenuController extends Controller
         $this->model->getProduct();
         $this->view->render('Меню');
     }
+
+    public function productsAction()
+    {
+        echo json_encode($this->model->getProduct(), JSON_UNESCAPED_UNICODE);
+    }
 }

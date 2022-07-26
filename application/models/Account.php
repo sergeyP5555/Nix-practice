@@ -5,6 +5,7 @@ namespace App\models;
 use App\lib\Exceptions\UserExist;
 use App\lib\Exceptions\WrongPassword;
 use App\lib\Db\Db;
+use App\lib\Messenger\Messenger;
 
 class Account
 {
@@ -40,6 +41,8 @@ class Account
         } elseif ($existingUsers) {
             throw new UserExist("Такой пользователь уже существует!");
         } else {
+            $confirmEmail = new Messenger();
+            $confirmEmail->sendMessage();
             $sql = "INSERT INTO users (login, password, email, phone) VALUES ( :login, :password, :email, :phone)";
             $statement = $db->db->prepare($sql);
             $this->bind($statement, $user);
@@ -57,5 +60,4 @@ class Account
         }
         return $statement;
     }
-
 }

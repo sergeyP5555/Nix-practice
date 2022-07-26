@@ -561,3 +561,8 @@ body {
     width: 100%;
     font-family: 'Pacifico', cursive;
 }
+.product p {
+    font-size: 28px;
+    color: #2b2e09;
+    text-shadow: 2px 2px 5px #2b2e09;
+}
