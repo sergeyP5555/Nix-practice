@@ -6,11 +6,6 @@ use App\core\Controller;
 use App\lib\Exceptions\UserExist;
 use App\lib\Exceptions\WrongPassword;
 use App\lib\Session\Session;
-use Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher;
-use Symfony\Component\Mailer\Mailer;
-use Symfony\Component\Mailer\Transport;
-use Symfony\Component\Mime\Email;
-use App\lib\Messenger\Messenger;
 
 class AccountController extends Controller
 {

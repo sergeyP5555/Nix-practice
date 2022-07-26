@@ -7,6 +7,7 @@ require 'vendor/autoload.php';
 use App\core\Router;
 use App\lib\Session\Session;
 
+
 $session = new Session();
 $session->start();
 $router = new Router();
