@@ -21,6 +21,11 @@ return [
         'action' => 'register',
     ],
 
+    'account/confirm/(\w+)' => [
+        'controller' => 'account',
+        'action' => 'confirm',
+    ],
+
     'menu' => [
         'controller' => 'menu',
         'action' => 'menu',
