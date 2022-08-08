@@ -3,6 +3,7 @@
 namespace App\controllers;
 
 use App\core\Controller;
+use App\lib\Exceptions\ActivationError;
 use App\lib\Exceptions\UserExist;
 use App\lib\Exceptions\WrongPassword;
 use App\lib\Session\Session;
@@ -24,6 +25,11 @@ class AccountController extends Controller
                 }
             } catch (WrongPassword $e) {
                 $this->view->render('Вход', ['message' => $e->getMessage()]);
+                $this->logger->error($e->getMessage(), ['User Name' => $_POST['login']]);
+                exit();
+            } catch (ActivationError $e) {
+                $this->view->render('MailError', ['message' => $e->getMessage()]);
+                $this->logger->error($e->getMessage(), ['User Name' => $_POST['login']]);
                 exit();
             }
         }
@@ -50,6 +56,19 @@ class AccountController extends Controller
         }
         $this->view->render('Регистрация');
     }
+
+    public function confirmAction()
+    {
+        $fullUrl = explode('/', $_SERVER['REQUEST_URI']);
+        $token = end($fullUrl);
+        if (!$this->model->checkActivationCode($token)) {
+            $this->view->errorCode(404);
+        }
+        $this->model->activation($token);
+        $this->view->render('Confirm', ['message' =>
+            'Регистрация завершена! Вы можете авторизироваться!']);
+    }
+
     public function logoutAction()
     {
         $session = new Session();
