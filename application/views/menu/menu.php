@@ -1,8 +1,6 @@
 
-<div class="menu-wrapper">
-    <h2 class="menu-header">Меню</h2>
-    <div class="menu-list">
-        <div class="block-menu" id="blockMenu"></div>
-    </div>
+<div id="app">
+    <product-list></product-list>
 </div>
-<script src="/index.js"></script>
+
+<script src="/public/js/main.js"></script>

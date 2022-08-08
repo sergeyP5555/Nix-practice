@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(254, 254, 244, 0.6) 50%, rgba(0, 0, 0, 0.6) 100%);
+    animation: background 15s infinite linear;
+    background-size: 400%;
+    border-radius: 25px;
+}
+@keyframes background {
+    0% {
+        background-position: 80% 0;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0;
+    }
+}
+
+/*.................................................Menu................................................................*/
+
+.menu-wrapper {
+    border-radius: 50px;
+}
+
+.menu-header {
+    color: gold;
+    text-shadow: 5px 4px 4px black;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Lora', serif;
+    border-radius: 25px;
+    background: linear-gradient(111deg, rgba(237, 224, 100, 1) 0%, rgba(29, 29, 28, 0.8127626050420168) 50%, rgba(238, 246, 48, 1) 100%);
+    box-shadow: 2px -2px 10px black;
+    animation: gradient-menu-header 8s infinite linear;
+    background-size: 400%;
+}
+
+@keyframes gradient-menu-header {
+    0% {
+        background-position: 80% 0;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0;
+    }
+}
+
+.block-menu {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 15px auto;
+}
+
+.menu-element {
+    width: 33%;
+    position: relative;
+    overflow: hidden;
+}
+
+.pizza-name {
+    font-size: 28px;
+    color: #2b2e09;
+    text-shadow: 2px 2px 5px #2b2e09;
+}
+
+.menu-element a {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(140deg, rgba(180, 213, 255, 0.6) 0%, rgba(255, 242, 84, 0.6) 50%, rgba(124, 69, 252, 0.6) 100%);
+    left: -100%;
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.menu-element:hover a {
+    left: 0;
+    overflow: visible;
+    transition: left 1.5s;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.description {
+    margin-top: 75px;
+    text-indent: 5px;
+    text-align: left;
+    font-size: 18px;
+    color: #211a00;
+    list-style-type: circle;
+    box-shadow: 0 -5px 6px rgb(230 245 69);
+    font-family: 'Caveat', cursive;
+}
+
+.price-and-weight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 1px dashed #020154;
+    font-size: 16px;
+    color: black;
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+}
+
+/*..................................................Cart...............................................................*/
+
+.main-cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+    background: url("/public/images/back-cart.jpg") center center no-repeat black;
+}
+/*....................................................CartProductItem..................................................*/
+.amount {
+    border-radius: 25px;
+    box-shadow: 0 2px 15px gold;
+    background: rgba(255, 220, 38, 0.8);
+    font-family: 'Philosopher', sans-serif;
+    color: #2b2e09;
+}
+.item-delete {
+    width: 20px;
+}
+/*..................................................CartProductList....................................................*/
+
+.foundation-cart {
+    width: 40%;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(237, 224, 100, 1) 0%, rgba(29, 29, 28, 0.8) 50%, rgba(238, 246, 48, 1) 100%);
+    animation: gradient-foundation-cart 10s infinite linear;
+    background-size: 400%;
+}
+
+@keyframes gradient-foundation-cart {
+    0% {
+        background-position: 80% 0;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0;
+    }
+}
+
+.name-cart {
+    text-align: center;
+    color: gold;
+    text-shadow: 5px 4px 4px black;
+    font-size: 36px;
+    font-family: 'Lora', serif;
+    opacity: 0.8;
+}
+
+.header-text-cart {
+    text-indent: 10px;
+    color: gold;
+    text-shadow: 5px 4px 4px black;
+    font-size: 36px;
+    font-family: 'Lora', serif;
+}
+
+.user-order {
+    font-size: 24px;
+    color: #f4c26d;
+    text-shadow: 2px 2px 5px #2b2e09;
+    font-family: 'Philosopher', sans-serif;
+}
+.user-order ul li {
+    margin-top: 10px;
+}
+
+/*........................................................CartBillingForm.............................................*/
+
+.form-of-payment {
+    font-size: 32px;
+    color: #2b2e09;
+    text-shadow: 2px 2px 5px #2b2e09;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.form-info {
+    width: 40%;
+    background: linear-gradient(135deg, rgba(237, 224, 100, 1) 0%, rgba(29, 29, 28, 0.8) 50%, rgba(238, 246, 48, 1) 100%);
+    animation: gradient-foundation-cart 10s infinite linear;
+    background-size: 400%;
+    text-align: center;
+    font-size: 32px;
+    border-radius: 25px;
+}
+
+.send-order {
+    margin-top: 100px;
+    width: 250px;
+    border-radius: 25px;
+    box-shadow: 0 2px 15px gold;
+    font-size: 24px;
+    background: rgba(255, 220, 38, 0.8);
+    font-family: 'Philosopher', sans-serif;
+    color: #2b2e09;
+}
+
+.send-order:hover {
+    box-shadow: 0 2px 15px black;
+    font-size: 24px;
+    background: rgba(255, 220, 38, 0.8);
+    transform: scale(1.1);
+}

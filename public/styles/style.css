@@ -475,31 +475,6 @@ body {
     border-radius: 50px;
 }
 
-.menu-header {
-    color: gold;
-    text-shadow: 5px 4px 4px black;
-    font-size: 36px;
-    text-align: center;
-    font-family: 'Lora', serif;
-    border-radius: 25px;
-    background: linear-gradient(111deg, rgba(237, 224, 100, 1) 0%, rgba(29, 29, 28, 0.8127626050420168) 50%, rgba(238, 246, 48, 1) 100%);
-    box-shadow: 2px -2px 10px black;
-    animation: gradient-menu-header 8s infinite linear;
-    background-size: 400%;
-}
-
-@keyframes gradient-menu-header {
-    0% {
-        background-position: 80% 0;
-    }
-    50% {
-        background-position: 20% 100%;
-    }
-    100% {
-        background-position: 80% 0;
-    }
-}
-
 .block-menu {
     display: flex;
     width: 75%;
