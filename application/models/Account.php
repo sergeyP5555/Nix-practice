@@ -26,7 +26,7 @@ class Account
                 throw new WrongPassword("Пароль введен неверно!");
             }
         } else {
-            return "Вы не подтвердили почту!";
+            return false;
         }
     }
 

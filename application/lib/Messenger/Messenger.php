@@ -43,10 +43,3 @@ class Messenger implements MailerInterface
         $mailer->send($mail);
     }
 }
-
-//if ($_GET['activation_code']){
-//    $hash = $_GET['activation_code'];
-//    if($_POST['activation_code'] == $hash) {
-//        $this->db->query('UPDATE users SET activation = 1 , activation_code = "" WHERE activation_code = :activation_code');
-//    }
-//}
