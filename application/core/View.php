@@ -14,7 +14,7 @@ class View
         $this->path = $route['controller'] . '/' . $route['action'];
     }
 
-    public function render($title, $vars = [])
+    public function render(string $title, array $vars = [])
     {
         if (file_exists('application/views/' . $this->path . '.php')) {
             ob_start();

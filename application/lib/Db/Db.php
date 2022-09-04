@@ -25,14 +25,4 @@ class Db
             echo "Database connect error: " . $e->getMessage();
         }
     }
-
-    public function query($sql)
-    {
-        $query = $this->db->query($sql);
-        $result = $query->fetchAll(PDO::FETCH_ASSOC);
-        echo '<pre>';
-        print_r($result);
-        echo '</pre>';
-    }
-
 }
